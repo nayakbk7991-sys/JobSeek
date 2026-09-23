@@ -1,0 +1,390 @@
+.post-job-page {
+  min-height: 100vh;
+  padding: 35px 20px 60px;
+  background: #f8fafc;
+}
+
+.post-job-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.post-job-back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 22px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-job-back-link:hover {
+  color: #2563eb;
+}
+
+.post-job-header {
+  margin-bottom: 28px;
+}
+
+.post-job-section-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.post-job-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.post-job-header p {
+  max-width: 650px;
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.post-job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-job-card {
+  padding: 26px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.post-job-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.post-job-card-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.post-job-card-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.post-job-card-heading p {
+  margin: 4px 0 0;
+  color: #98a2b3;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.post-job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.post-job-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.post-job-field + .post-job-field {
+  margin-top: 0;
+}
+
+.post-job-field label {
+  margin-bottom: 7px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.post-job-field label span {
+  margin-left: 3px;
+  color: #dc2626;
+}
+
+.post-job-field input,
+.post-job-field select,
+.post-job-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-job-field input,
+.post-job-field select {
+  height: 44px;
+  padding: 0 12px;
+}
+
+.post-job-field textarea {
+  min-height: 150px;
+  padding: 12px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.post-job-field input::placeholder,
+.post-job-field textarea::placeholder {
+  color: #98a2b3;
+}
+
+.post-job-field input:focus,
+.post-job-field select:focus,
+.post-job-field textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.post-job-field small {
+  margin-top: 7px;
+  color: #98a2b3;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.post-job-grid .post-job-field:nth-child(6) {
+  min-width: 0;
+}
+
+.post-job-card > .post-job-field + .post-job-field {
+  margin-top: 20px;
+}
+
+.post-job-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 13px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.post-job-error span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.post-job-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 3px;
+}
+
+.post-job-cancel-button,
+.post-job-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.post-job-cancel-button {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+}
+
+.post-job-cancel-button:hover {
+  border-color: #bfc5cf;
+  background: #f9fafb;
+}
+
+.post-job-submit-button {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.post-job-submit-button:hover:not(:disabled) {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+}
+
+.post-job-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.post-job-back-link:focus-visible,
+.post-job-cancel-button:focus-visible,
+.post-job-submit-button:focus-visible {
+  outline: 3px solid #bfdbfe;
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .post-job-page {
+    padding: 28px 15px 45px;
+  }
+
+  .post-job-header h1 {
+    font-size: 26px;
+  }
+
+  .post-job-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .post-job-card {
+    padding: 21px;
+  }
+
+  .post-job-card-heading {
+    margin-bottom: 20px;
+  }
+
+  .post-job-card-heading h2 {
+    font-size: 17px;
+  }
+
+  .post-job-actions {
+    justify-content: stretch;
+  }
+
+  .post-job-cancel-button,
+  .post-job-submit-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-job-page {
+    padding: 22px 12px 40px;
+  }
+
+  .post-job-header {
+    margin-bottom: 22px;
+  }
+
+  .post-job-header h1 {
+    font-size: 23px;
+  }
+
+  .post-job-header p {
+    font-size: 13px;
+  }
+
+  .post-job-card {
+    padding: 17px;
+    border-radius: 11px;
+  }
+
+  .post-job-card-heading {
+    gap: 10px;
+  }
+
+  .post-job-card-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .post-job-card-heading h2 {
+    font-size: 16px;
+  }
+
+  .post-job-card-heading p {
+    font-size: 11px;
+  }
+
+  .post-job-field input,
+  .post-job-field select {
+    height: 42px;
+  }
+
+  .post-job-field input,
+  .post-job-field select,
+  .post-job-field textarea {
+    font-size: 13px;
+  }
+
+  .post-job-actions {
+    flex-direction: column-reverse;
+  }
+
+  .post-job-cancel-button,
+  .post-job-submit-button {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .post-job-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .post-job-card {
+    padding: 14px;
+  }
+
+  .post-job-header h1 {
+    font-size: 21px;
+  }
+}

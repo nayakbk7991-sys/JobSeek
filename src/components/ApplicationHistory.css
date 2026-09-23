@@ -1,0 +1,1090 @@
+.application-history {
+  width: 100%;
+}
+
+.application-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.application-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.application-card-header h3 {
+  margin: 0 0 8px;
+}
+
+.application-card p {
+  margin: 8px 0;
+}
+
+.age-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.age-new {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.age-recent {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.age-old {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.status-section {
+  margin-top: 15px;
+}
+
+.status-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.status-section select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-applied {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-under-review {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-shortlisted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.current-status-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: status-pulse 1.5s infinite;
+}
+
+@keyframes status-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.current-status-dot.status-applied {
+  background-color: #3730a3;
+}
+
+.current-status-dot.status-under-review {
+  background-color: #92400e;
+}
+
+.current-status-dot.status-shortlisted {
+  background-color: #166534;
+}
+
+.current-status-dot.status-rejected {
+  background-color: #991b1b;
+}
+
+.last-status-update {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.live-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: live-status-pulse 1.5s infinite;
+}
+
+@keyframes live-status-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.status-progress-section {
+  margin-top: 18px;
+}
+
+.status-progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.status-progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.status-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-progress-fill.status-applied {
+  background: #3730a3;
+}
+
+.status-progress-fill.status-under-review {
+  background: #92400e;
+}
+
+.status-progress-fill.status-shortlisted {
+  background: #166534;
+}
+
+.status-progress-fill.status-rejected {
+  background: #991b1b;
+}
+
+.status-stage {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.status-stage-indicator {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.stage-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.stage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 70px;
+  text-align: center;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.stage-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d1d5db;
+  border: 3px solid #f3f4f6;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.stage-dot.stage-active {
+  background: #166534;
+  border-color: #dcfce7;
+  transform: scale(1.15);
+}
+
+.stage-line {
+  flex: 1;
+  height: 3px;
+  margin-top: 6px;
+  background: #d1d5db;
+  transition: background 0.3s ease;
+}
+
+.stage-line-active {
+  background: #166534;
+  height: 4px;
+  margin-top: 5px;
+}
+
+.stage-dot.stage-current {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 0 4px #dcfce7;
+  animation: current-stage-pulse 1.5s infinite;
+}
+
+@keyframes current-stage-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.stage-label {
+  transition: all 0.3s ease;
+}
+
+.stage-label-current {
+  font-weight: 700;
+  color: #111827;
+  transform: scale(1.05);
+}
+
+.status-description {
+  margin-top: 15px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.5;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.3s ease;
+}
+
+.status-description.status-applied,
+.status-description.status-under-review,
+.status-description.status-shortlisted,
+.status-description.status-rejected {
+  animation: status-description-change 0.4s ease;
+}
+
+@keyframes status-description-change {
+  from {
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.current-status-summary {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.current-status-summary h4 {
+  margin-top: 0;
+}
+
+.current-status-progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.current-status-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.current-status-progress-fill.status-applied {
+  background-color: #3730a3;
+}
+
+.current-status-progress-fill.status-under-review {
+  background-color: #92400e;
+}
+
+.current-status-progress-fill.status-shortlisted {
+  background-color: #166534;
+}
+
+.current-status-progress-fill.status-rejected {
+  background-color: #991b1b;
+}
+
+.status-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background: white;
+}
+
+.status-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.status-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-legend-dot.status-applied {
+  background-color: #3730a3;
+}
+
+.status-legend-dot.status-under-review {
+  background-color: #92400e;
+}
+
+.status-legend-dot.status-shortlisted {
+  background-color: #166534;
+}
+
+.status-legend-dot.status-rejected {
+  background-color: #991b1b;
+}
+
+.history-toggle-button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-toggle-button:hover {
+  background: #555;
+}
+
+.history-toggle-button.history-open {
+  background: #555;
+}
+
+.history-count-badge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.history-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.history-arrow.arrow-open {
+  transform: rotate(180deg);
+}
+
+.status-history {
+  margin-top: 15px;
+  animation: history-open 0.35s ease;
+}
+
+@keyframes history-open {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.status-history-heading h4 {
+  margin: 0;
+}
+
+.status-history-heading span {
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #e5e7eb;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-history-item {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+}
+
+.status-history-item::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 28px;
+  width: 2px;
+  height: calc(100% + 10px);
+  background: #d1d5db;
+}
+
+.status-history-item:last-of-type::before {
+  display: none;
+}
+
+.status-history-item::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.status-history-item.status-applied::after {
+  background-color: #3730a3;
+}
+
+.status-history-item.status-under-review::after {
+  background-color: #92400e;
+}
+
+.status-history-item.status-shortlisted::after {
+  background-color: #166534;
+}
+
+.status-history-item.status-rejected::after {
+  background-color: #991b1b;
+}
+
+.latest-history-item {
+  border: 2px solid #111827;
+  padding: 12px;
+  border-radius: 8px;
+  position: relative;
+  animation: latest-history-highlight 0.5s ease;
+}
+
+@keyframes latest-history-highlight {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.latest-history-item::after {
+  width: 18px;
+  height: 18px;
+  left: 2px;
+  top: 3px;
+  box-shadow: 0 0 0 4px #e5e7eb;
+}
+
+.latest-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 7px;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-direction-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-direction-icon.status-applied {
+  color: #3730a3;
+  background: #e0e7ff;
+}
+
+.status-direction-icon.status-under-review {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.status-direction-icon.status-shortlisted {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-direction-icon.status-rejected {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.clear-history-button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.clear-history-button:disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.no-history-message {
+  padding: 10px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.history-success-message {
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 13px;
+}
+
+.status-notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.notification-total {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: white;
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.clear-all-notifications-button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #374151;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear-all-notifications-button:hover {
+  background: #1f2937;
+}
+
+.status-notification {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: status-notification-show 0.4s ease;
+}
+
+.status-notification.status-applied {
+  background: #eef2ff;
+  border: 1px solid #818cf8;
+  color: #3730a3;
+}
+
+.status-notification.status-under-review {
+  background: #fffbeb;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+}
+
+.status-notification.status-shortlisted {
+  background: #f0fdf4;
+  border: 1px solid #4ade80;
+  color: #166534;
+}
+
+.status-notification.status-rejected {
+  background: #fef2f2;
+  border: 1px solid #f87171;
+  color: #991b1b;
+}
+
+.notification-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.notification-content strong {
+  font-size: 14px;
+}
+
+.notification-content .status-badge {
+  margin: 0 3px;
+}
+
+.notification-time {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.notification-close-button {
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #1e3a8a;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-close-button:hover {
+  background: #dbeafe;
+}
+
+@keyframes status-notification-show {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .status-notification-container {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
+}
+.notification-sound-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #111827;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-sound-button:hover {
+  background: #e5e7eb;
+}
+.notification-volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.notification-volume-control span {
+  white-space: nowrap;
+}
+
+.notification-volume-control input[type="range"] {
+  width: 70px;
+  cursor: pointer;
+}
+.notification-sound-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.notification-sound-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.notification-test-sound-button {
+  padding: 6px 9px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: #111827;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.notification-test-sound-button:hover {
+  background: #e5e7eb;
+}
+
+.notification-test-sound-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.application-search {
+  margin-bottom: 20px;
+}
+
+.application-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.application-search input:focus {
+  border-color: #4f46e5;
+}
+
+.no-search-results {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #64748b;
+  background: #f8fafc;
+}
+.application-search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.application-search input {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.application-search input:focus {
+  border-color: #4f46e5;
+}
+
+.application-search button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #374151;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.application-search button:hover {
+  background: #1f2937;
+}
+
+.no-search-results {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+@media (max-width: 600px) {
+  .application-search {
+    flex-direction: column;
+  }
+
+  .application-search button {
+    width: 100%;
+  }
+}
+.application-search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.application-search input {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.application-search input:focus {
+  border-color: #4f46e5;
+}
+
+.application-search select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.application-search select:focus {
+  border-color: #4f46e5;
+}
+
+.application-search button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #374151;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.application-search button:hover {
+  background: #1f2937;
+}
+
+.no-search-results {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+@media (max-width: 700px) {
+  .application-search {
+    flex-direction: column;
+  }
+
+  .application-search input,
+  .application-search select,
+  .application-search button {
+    width: 100%;
+  }
+}
+.selected-location-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e8f0fe;
+  color: #1a4f9c;
+  border: 1px solid #b8cff5;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.location-chip button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #1a4f9c;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.location-chip button:hover {
+  background: #1a4f9c;
+  color: white;
+}
+.search-highlight {
+  padding: 0 2px;
+  border-radius: 3px;
+  background: #fff3a3;
+  color: inherit;
+}
