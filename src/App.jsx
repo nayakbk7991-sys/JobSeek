@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
 import RoleRoute from "./components/RoleRoute";
@@ -20,13 +19,11 @@ import ApplyJob from "./pages/ApplyJob";
 import MyApplications from "./pages/MyApplications";
 import Profile from "./pages/Profile";
 import SavedJobs from "./pages/SavedJobs";
-
 import RecruiterProfile from "./pages/RecruiterProfile";
 import RecruiterDashboard from "./pages/RecruiterDashboard";
 import PostJob from "./pages/PostJob";
 import EditJob from "./pages/EditJob";
 import RecruiterApplications from "./pages/RecruiterApplications";
-
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
@@ -42,7 +39,6 @@ function AppLayout() {
       {!isAuthPage && <Navbar />}
 
       <Routes>
-
         <Route
           path="/login"
           element={
@@ -178,7 +174,6 @@ function AppLayout() {
             />
           }
         />
-
       </Routes>
     </>
   );
