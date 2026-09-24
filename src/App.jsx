@@ -1,5 +1,4 @@
 import {
-  BrowserRouter,
   Navigate,
   Routes,
   Route,
@@ -180,11 +179,7 @@ function AppLayout() {
 }
 
 function App() {
-  return (
-    <BrowserRouter>
-      <AppLayout />
-    </BrowserRouter>
-  );
+  return <AppLayout />;
 }
 
 export default App;
